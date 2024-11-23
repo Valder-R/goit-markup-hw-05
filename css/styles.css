@@ -441,7 +441,7 @@ a {
 .footer-subscribe .button {
     border-radius: 4px;
     padding: 8px 24px;
-    width: 165px;
+    min-width: 165px;
     height: 40px;
     display: flex;
     align-items: center;
@@ -484,7 +484,8 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 24px;
+    padding: 72px 24px 24px 24px;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-closer {
@@ -499,16 +500,21 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    padding: 0;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .closer {
     fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-closer:focus,
 .modal-closer:hover {
     background-color: #404bbf;
-    cursor: pointer;
+    border: none;
 }
 
 .modal-closer:focus .closer,
@@ -524,24 +530,14 @@ a {
     text-align: center;
     color: #2e2f42;
     display: block;
-    margin-top: 48px;
     margin-bottom: 16px;
 }
 
-
-.modal-input {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-    margin-bottom: 16px;
-}
 
 .form-field {
     width: 360px;
     line-height: 0;
+    margin-bottom: 8px;
 }
 
 .form-label {
