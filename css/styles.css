@@ -172,7 +172,7 @@ a {
     font-size: inherit;
     line-height: inherit;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: #ffffff;
     font-family: inherit;
     cursor: pointer;
     border-radius: 4px;
@@ -408,7 +408,7 @@ a {
     margin-left: auto;
 }
 
-.footer-submit-wraper {
+.footer-form{
     display: flex;
     gap: 24px;
     align-items: center;
@@ -422,12 +422,12 @@ a {
     height: 40px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
     padding: 8px 16px;
-    background-color: #2e2f42;
+    background-color: transparent;
     font-weight: 400;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: #ffffff;
 }
 
 .footer-input::placeholder {
@@ -435,7 +435,7 @@ a {
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    color: #fff;
+    color: #ffffff;
 }
 
 .footer-subscribe .button {
@@ -446,11 +446,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 16px;
+    border: none;
 }
 
 .footer-submit-icon {
-    fill: #fff;
+    fill: #ffffff;
+    margin-left: 16px;
 }
 
 .backdrop {
