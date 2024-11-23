@@ -563,14 +563,17 @@ a {
     border-radius: 4px;
     height: 40px;
     padding: 11px 38px;
-   
+    background-color: transparent;
     outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-icon {
     position: absolute;
-    top: 8px;
+    top: 50%;
     left: 16px;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
@@ -590,7 +593,10 @@ a {
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    margin: 0;
+    margin-bottom: 16px;
+    color: rgba(46, 47, 66, 0.4);
+    background-color: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-textarea::placeholder {
@@ -603,6 +609,7 @@ a {
 
 .form-checkbox {
     line-height: 0;
+    margin-bottom: 24px;
 }
 
 .checkbox-label {
@@ -630,24 +637,22 @@ a {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), 
-    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-icon {
-    opacity: 0;
+    fill: transparent;
 }
 
 input[type='checkbox']:checked + .checkbox-label .modal-form-checkbox {
     background-color: #404bbf;
-    border: 1px solid #404bbf;
+    border: none;
 }
 
 input[type='checkbox']:checked + .checkbox-label .checkbox-icon {
     fill: #f4f4fd;
-    opacity: 1;
 }
 
 .modal-form {
@@ -660,5 +665,8 @@ input[type='checkbox']:checked + .checkbox-label .checkbox-icon {
     line-height: 1.5;
     letter-spacing: 0.04em;
     text-align: center;
-    color: #fff;
+    color: #ffffff;
+    display: block;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
 }
